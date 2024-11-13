@@ -25,6 +25,14 @@ export default defineType({
             validation:(rule)=>rule.required()
         }),
         defineField({
+            name:"image",
+            title:"Image",
+            type:"image",
+            options:{
+                hotspot:true
+            }
+        }),
+        defineField({
             name:"category",
             title:"Category",
             type:"array",
@@ -42,6 +50,11 @@ export default defineType({
             type:"number",
         }),
         defineField({
+            name:"description",
+            title:"Description",
+            type:"string",
+        }),
+        defineField({
             name:"ratings",
             title:"Ratings",
             type:"number",
@@ -55,12 +68,17 @@ export default defineType({
         defineField({
             name:"isnew",
             title:"New Arrival",
-            type:"number" 
+            type:"boolean",
         }),
         defineField({
             name:"quantity",
             title:"Quantity",
             type:"number"
+        }),
+        defineField({
+            name:"position",
+            title:"Position",
+            type:"string"
         })
     ],
     preview:{

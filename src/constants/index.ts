@@ -1,4 +1,4 @@
-import { GoRocket } from "react-icons/go";
+
 export const navBarList = [
     {
         title: "Home",
