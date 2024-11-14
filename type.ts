@@ -30,16 +30,16 @@ type Slug = {
     _type: "slug";
 }
 
-type Category={
+type Category = {
     _id: string,
-    name: string 
+    name: string
 }
 
 export interface ProductData {
-    title :string;
+    title: string;
     image: ImageAsset;
-    quantity : number;
-    price : number;
+    quantity: number;
+    price: number;
     category: Category[],
     slug: Slug;
     _createdAt: string;
@@ -47,9 +47,22 @@ export interface ProductData {
     _updatedAt: string;
     ratings: number;
     brand: string;
-    _type:"product",
+    _type: "product",
     _id: string;
     position: string;
     rowprice: number
+
+}
+export interface UserInformation {
+    id: string,
+    name: string,
+    email: string
+}
+export interface storeState {
+    shoppers: {
+        cart: ProductData[],
+        wishList: ProductData[],
+        userInformation: UserInformation | null,
+    }
 
 }

@@ -28,6 +28,7 @@ const Banner = async () => {
                 <Image src={urlFor(singleBanner?.image).url()} alt={singleBanner?.title}
                     width={500}
                     height={500}
+                    priority
                     className='object-contain h-72 md:h-full max-h-[600px] self-end group-hover:scale-105 hoverEffect'
                 />
             </div>
@@ -43,7 +44,7 @@ const Banner = async () => {
                             <Link href={"/shop"} className='mt-5 underline underline-offset-2 decoration-[1px]  text-black/60 hover:text-darkOrange hoverEffect font-bold'>Shop now!</Link>
                         </div>
 
-                        <Image src={urlFor(val.image).url()} width={500} height={500} alt={val.title}
+                        <Image priority src={urlFor(val.image).url()} width={500} height={500} alt={val.title}
                             className='object-contain h-72 md:h-60 w-1/2 group-hover:scale-105 hoverEffect'
                         />
                     </div>

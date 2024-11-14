@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import Layout from "@/components/Layout";
-
+import { Toaster } from 'react-hot-toast';
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -37,6 +37,12 @@ export default function RootLayout({
           {children}
           <Sidebar />
           <Footer />
+          <Toaster position="bottom-right" toastOptions={{
+            style:{
+              background:"#000000",
+              color:"#ffffff"
+            }
+          }}/>
         </Layout>
       </body>
     </html>
