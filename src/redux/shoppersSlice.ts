@@ -38,6 +38,7 @@ export const shoppersSlice=createSlice({
         },
         increaseQuantity:(state, action)=>{
             const existingProduct = state.cart.find((item)=> item._id === action.payload._id);
+            console.log(existingProduct, "existingProduct.....")
             if(existingProduct){
                 existingProduct.quantity +=1;
             } else{

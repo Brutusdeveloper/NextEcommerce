@@ -43,7 +43,6 @@ const Banner = async () => {
                             <p className='text-black/60 font-medium mt-3'>From <FormatedPrice className="text-darkOrange font-semibold" amount={val.price}/></p>
                             <Link href={"/shop"} className='mt-5 underline underline-offset-2 decoration-[1px]  text-black/60 hover:text-darkOrange hoverEffect font-bold'>Shop now!</Link>
                         </div>
-
                         <Image priority src={urlFor(val.image).url()} width={500} height={500} alt={val.title}
                             className='object-contain h-72 md:h-60 w-1/2 group-hover:scale-105 hoverEffect'
                         />
